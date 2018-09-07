@@ -1,0 +1,37 @@
+<div class="container">
+  <h3>class 제어하기</h3>
+  <input type="text" [(ngModel)]="inputClass" />  
+  <br/>
+  <button class="btn btn-default">버튼</button>
+  <button [class]="'btn btn-primary'">버튼</button>
+  <button [class]="inputClass">버튼</button>
+
+  <h3>특정 클래스만 추가 or 제거</h3>
+  큰버튼<input type="checkbox" [(ngModel)]="isLarge">
+  <br/>
+  <button class="btn btn-primary" [class.btn-lg]="isLarge">버튼</button>
+
+  <h3>ngClass 디렉티브 활용</h3>
+  <button [ngClass]="'btn btn-success'">버튼</button>
+  <button [ngClass]="['btn', 'btn-warning']">버튼</button>
+  <button [ngClass]="{'btn':true, 'btn-danger':true}">버튼</button>
+
+  <h3>Tab 예제</h3>
+  <ul class="nav nav-tabs">
+    <li [class.active]="thisPage=='home'"><a href="#home" (click)="thisPage='home'">Home</a></li>
+    <li [class.active]="thisPage=='game'"><a href="#game" (click)="thisPage='game'">Game</a></li>
+    <li [class.active]="thisPage=='shop'"><a href="#shop" (click)="thisPage='shop'">Shop</a></li>
+  </ul>
+  <div class="tab-content">
+    <div [class.active]="thisPage=='home'" class="tab-pane" id="home">
+      <p class="bg-success">Home Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis officia placeat, quaerat error, perferendis commodi totam reprehenderit maiores, animi numquam suscipit tempora ipsam natus eum obcaecati inventore blanditiis deleniti modi?</p>
+    </div>
+    <div [class.active]="thisPage=='game'" class="tab-pane" id="game">
+      <p class="bg-primary">Game Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis officia placeat, quaerat error, perferendis commodi totam reprehenderit maiores, animi numquam suscipit tempora ipsam natus eum obcaecati inventore blanditiis deleniti modi?</p>
+    </div>
+    <div [class.active]="thisPage=='shop'" class="tab-pane" id="shop">
+      <p class="bg-danger">Shop Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis officia placeat, quaerat error, perferendis commodi totam reprehenderit maiores, animi numquam suscipit tempora ipsam natus eum obcaecati inventore blanditiis deleniti modi?</p>
+    </div>
+  </div>  
+</div>
+

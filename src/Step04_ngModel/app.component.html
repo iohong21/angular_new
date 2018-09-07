@@ -1,0 +1,14 @@
+<div class="container">
+  <h3>UI 이벤트 처리</h3>
+  <input #one type="text" (keyup)="sendInput($event)">
+  <button (click)="sendClick(one)">전송</button>
+  <button (click)="msgs.length=0">Clear</button>
+  <ul>
+    <li *ngFor="let tmp of msgs; index as i">
+      {{tmp}}
+      <button (click)="msgs.splice(i,1)">X</button>
+    </li>
+  </ul>
+  
+</div>
+

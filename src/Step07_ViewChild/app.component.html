@@ -1,0 +1,20 @@
+<!--
+  ../index.html 에 <app-root></app-root>
+  여기에 작성한 내용이 해석된 결과가 들어간다.
+-->
+<div class="container">
+  <h3>template 안에 있는 문서객체의 참조값 사용</h3>
+  <input type="text" #one /><br />
+  <input type="text" #two /><br />
+  <input type="text" ref-three /><br />
+  <input type="text" #four /><br />
+  <input type="text" #five /><br />
+
+  <button (click)="one.value='one'">one</button>
+  <button (click)="two.value='two'">two</button>
+  <button (click)="three.value='three'">three</button>
+  <button (click)="fourClicked(four)">four</button>
+  <button (click)="fiveClicked()">five</button>
+</div>
+
+

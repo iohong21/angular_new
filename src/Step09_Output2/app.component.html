@@ -1,0 +1,12 @@
+<!--
+  ../index.html 에 <app-root></app-root>
+  여기에 작성한 내용이 해석된 결과가 들어간다.
+-->
+<div class="container">
+	<h3>회원 목록입니다.</h3>
+	<div *ngFor="let tmp of members;index as i">
+		<member-detail [mem]="tmp" [i]="i" (deleteEmit)="delMember($event)"></member-detail>
+	</div>
+</div>
+
+

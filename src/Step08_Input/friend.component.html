@@ -1,0 +1,8 @@
+<!-- friend.component.html 파일 입니다. -->
+<h3>친구 목록입니다.</h3>
+ <ul>
+   <li *ngFor="let tmp of friends; index as i">
+      {{tmp}}
+      <button (click)="delFriend(i)">x</button>
+   </li>
+ </ul>

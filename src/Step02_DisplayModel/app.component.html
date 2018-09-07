@@ -1,0 +1,40 @@
+<!-- 
+  ../index.html 에 <app-root></app-root>
+  여기에 작성한 내용이 해석된 결과가 들어간다.  
+-->
+<div class="container">
+  <h3>모델의 데이터 출력 테스트</h3>
+  <p>title: <strong>{{title}}</strong></p>
+
+  <h3>친구 이름 목록</h3>
+  <ul>
+    <li *ngFor="let tmp of friends">{{tmp}}</li>
+  </ul>
+
+  <h3>사람 한명의 정보</h3>
+  <p>번호: <strong>{{person.num}}</strong></p>
+  <p>이름: <strong>{{person.name}}</strong></p>
+  <p>주소: <strong>{{person.addr}}</strong></p>
+
+  <h3>회원 한명의 정보</h3>
+  <p>번호: <strong>{{member.num}}</strong></p>
+  <p>이름: <strong>{{member.name}}</strong></p>
+  <p>주소: <strong>{{member.addr}}</strong></p>
+
+  <h3>회원 목록 입니다.</h3>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <td>주소</td>
+      </tr>
+      <tr *ngFor="let tmp of members;index as i" >
+        <td>{{tmp.num}} 인덱스:{{i}}</td>
+        <td>{{tmp.name}}</td>
+        <td>{{tmp.addr}}</td>
+      </tr>
+    </thead>
+  </table>
+</div>
+

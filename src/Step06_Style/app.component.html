@@ -1,0 +1,25 @@
+<!--
+  ../index.html 에 <app-root></app-root>
+  여기에 작성한 내용이 해석된 결과가 들어간다.
+-->
+<div class="container">
+  <h3>style 조작 예제</h3>
+  
+  <p style="color:red;">첫번쨰 p</p>
+  <p [style.color]="'red'">두번쨰 p</p>
+  <input type="text" placeholder="색상 입력..." [(ngModel)]="bColor" />
+  <input type="range" min="5"  max="100" value="16" [(ngModel)]="fSize">
+  <p>글자의 크기 : <strong>{{fSize}}</strong>px</p>
+  <div class="box" [style.background-color]="bColor" [style.font-size.px]="fSize">가</div>
+
+  <h3>ngStyle 디렉티브 활용</h3>
+  <div [ngStyle]="{'width':'100px','height.px':70,'border':'1px solid blue'}">div</div>
+  <button (click)="lmove=lmove+10">오른쪽</button>
+  <button (click)="lmove=lmove-10">왼쪽</button>
+  <button (click)="updown=updown+10">아래로</button>
+  <button (click)="updown=updown-10">위로</button>
+  <br/>
+  <img src="/assets/images/kim1.png" [ngStyle]="{'margin-left.px':lmove}" [style.margin-top.px]="updown">
+</div>
+
+
